@@ -1,6 +1,6 @@
 # A Sample Spring Boot Application
  - Reads JSON data from a file, & populates into an H2 database
- - Spring boot version 2.0.0
+ - Spring boot version 2.x
  - exposes actuator end points 
       - http://localhost:9904/actuator/{endpoint}
  - to get list of actuator metrics:
