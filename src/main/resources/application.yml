@@ -1,0 +1,33 @@
+server.port: 9904 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info, beans, env, mappings, metrics, jolokia, heapdump, configprops, loggers 
+          
+  endpoint:
+    health:
+      show-details: ALWAYS
+      #show-details: WHEN_AUTHORIZED
+    env:
+      keys-to-sanitize: java.vm.name, local.server.port
+    
+    jolokia:
+      config:
+        listenForHttpService: true
+        debug: true
+        
+
+#prettify the json output
+spring:
+  jackson:
+    serialization:
+      indent-output: true
+ 
+  h2:
+    console:
+      enabled: true
+
+      
+   
